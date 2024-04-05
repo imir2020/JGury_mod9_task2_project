@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="database.integration.controller.UserRegistrationControllerIT" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-04-05T16:23:47" hostname="LOCALHOST" time="0.029">
+  <properties/>
+  <testcase name="userRegistrationPage()" classname="database.integration.controller.UserRegistrationControllerIT" time="0.01"/>
+  <testcase name="delete()" classname="database.integration.controller.UserRegistrationControllerIT" time="0.007"/>
+  <testcase name="findById()" classname="database.integration.controller.UserRegistrationControllerIT" time="0.009"/>
+  <testcase name="createUser()" classname="database.integration.controller.UserRegistrationControllerIT" time="0.002"/>
+  <system-out><![CDATA[Hibernate: 
+    select
+        u1_0.id,
+        u1_0.birthday,
+        u1_0.image,
+        u1_0.name,
+        u1_0.password,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.password=?
+2024-04-05T19:23:47.199+03:00  INFO 14360 --- [    Test worker] by.service.UserService                   : Attempt to delete User object by your password, in method delete()
+2024-04-05T19:23:47.204+03:00  INFO 14360 --- [    Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.birthday,
+        u1_0.image,
+        u1_0.name,
+        u1_0.password,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

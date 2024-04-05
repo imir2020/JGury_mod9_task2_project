@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - SupplierServiceIT</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>SupplierServiceIT</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/database.integration.service.html">database.integration.service</a> &gt; SupplierServiceIT</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.025s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">delete()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findAll()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findById()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">listEmailAndPhoneNumber()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">listPhoneNumbers()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">save()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateEmail()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-04-05T19:23:48.770+03:00  INFO 14360 --- [    Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        suppliers s1_0
+SupplierDto(id=1, name=Horns&amp;&amp;Hoofs, address=Perm, commi 35, email=horn@gmail.com, phoneNumber=8-988-342-65-98)
+SupplierDto(id=2, name=Beaks&amp;&amp;Feathers, address=Unknown, email=beak@gmail.com, phoneNumber=1-111-111-11-99)
+SupplierDto(id=3, name=Noses&amp;&amp;Tails, address=Kitezh, email=nose@yandex.ru, phoneNumber=8-455-876-23-21)
+SupplierDto(id=4, name=Horns&amp;&amp;Hoofs, address=Perm, commi 35, email=horn@gmail.com, phoneNumber=8-988-342-65-11)
+SupplierDto(id=5, name=Horns&amp;&amp;Hoofs, address=Perm, commi 35, email=horn@gmail.com, phoneNumber=8-988-342-65-11)
+2024-04-05T19:23:48.774+03:00  INFO 14360 --- [    Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        suppliers s1_0 
+    where
+        s1_0.id=?
+Hibernate: 
+    insert 
+    into
+        suppliers
+        (address,e_mail,name,phone_number) 
+    values
+        (?,?,?,?)
+2024-04-05T19:23:48.779+03:00  INFO 14360 --- [    Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        suppliers s1_0 
+    where
+        s1_0.id=?
+Hibernate: 
+    update
+        suppliers 
+    set
+        e_mail=? 
+    where
+        id=?
+2024-04-05T19:23:48.784+03:00  INFO 14360 --- [    Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method updateEmail()
+2024-04-05T19:23:48.784+03:00  INFO 14360 --- [    Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        suppliers s1_0 
+    where
+        s1_0.id=?
+2024-04-05T19:23:48.787+03:00  INFO 14360 --- [    Test worker] by.service.SupplierService               : Attempt to find  phone numbers collection, in method listPhoneNumbers()
+Hibernate: 
+    select
+        s1_0.phone_number 
+    from
+        suppliers s1_0 
+    order by
+        s1_0.phone_number
+1-111-111-11-99
+8-455-876-23-21
+8-988-342-65-11
+8-988-342-65-11
+8-988-342-65-98
+2024-04-05T19:23:48.791+03:00  INFO 14360 --- [    Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+Hibernate: 
+    insert 
+    into
+        suppliers
+        (address,e_mail,name,phone_number) 
+    values
+        (?,?,?,?)
+2024-04-05T19:23:48.794+03:00  INFO 14360 --- [    Test worker] by.service.SupplierService               : Attempt to find list of arrays emails and phone numbers in method listEmailAndPhoneNumber()
+Hibernate: 
+    select
+        s1_0.e_mail,
+        s1_0.phone_number 
+    from
+        suppliers s1_0 
+    order by
+        s1_0.e_mail
+[Ljava.lang.Object;@1e0630cc
+[Ljava.lang.Object;@29ad358c
+[Ljava.lang.Object;@fd42b93
+[Ljava.lang.Object;@6639a9f0
+[Ljava.lang.Object;@491665ab
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at 5 апр. 2024 г., 19:23:48</p>
+</div>
+</div>
+</body>
+</html>

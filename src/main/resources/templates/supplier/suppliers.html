@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поставщики</title>
+</head>
+<body>
+<h2>Список поставщиков</h2>
+<br>
+<div th:each="supplr:${suppliers}">
+    <form th:action="@{/suppliers/{id}(id=${supplr.id})}"method="get" th:object="${supplr}">
+            <li th:text="'Address: ' + ${supplr.address}"></li>
+            <li th:text="'Email: ' + ${supplr.email}"></li>
+            <li th:text="'Name: ' + ${supplr.name}"></li>
+            <li th:text="'PhoneNumber: ' + ${supplr.phoneNumber}"></li>
+       <br>
+        <button type="submit">Change</button>
+        <br>
+    </form>
+</div>
+<br>
+<form action="/suppliers/registration" method="get">
+    <button type="submit">Registration new supplier</button>
+</form>
+<br>
+<form action="/login" method="get">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="database.integration.repository.EmployeeRepositoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-04-05T16:23:48" hostname="LOCALHOST" time="0.039">
+  <properties/>
+  <testcase name="findAllEmployeesLessManagers()" classname="database.integration.repository.EmployeeRepositoryTest" time="0.002"/>
+  <testcase name="findEmployeesPhoneNumberById()" classname="database.integration.repository.EmployeeRepositoryTest" time="0.006"/>
+  <testcase name="delete()" classname="database.integration.repository.EmployeeRepositoryTest" time="0.006"/>
+  <testcase name="findAll()" classname="database.integration.repository.EmployeeRepositoryTest" time="0.008"/>
+  <testcase name="update()" classname="database.integration.repository.EmployeeRepositoryTest" time="0.006"/>
+  <testcase name="findById()" classname="database.integration.repository.EmployeeRepositoryTest" time="0.003"/>
+  <testcase name="save()" classname="database.integration.repository.EmployeeRepositoryTest" time="0.005"/>
+  <system-out><![CDATA[Hibernate: 
+    select
+        e1_0.phone_number 
+    from
+        employees e1_0 
+    where
+        e1_0.id=?
+8-925-444-89-17
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        employees e1_0 
+    left join
+        ranks r1_0 
+            on r1_0.id=e1_0.rank_id 
+    where
+        e1_0.id=?
+2024-04-05T19:23:48.394+03:00  WARN 14360 --- [    Test worker] d.i.repository.EmployeeRepositoryTest    : Object was deleted in method delete()
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        e1_0.rank_id 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+Employee(id=1, lastName=Ivanov, name=Oleg, middleName=Ivanovich, dateBirth=1992-11-21, phoneNumber=8-911-432-89-61, address=Moskow, Novyi Arbat 22, kv.2555, rank=Rank(id=1, rankName=MANAGER, salary=80000))
+Employee(id=2, lastName=Sergeev, name=Kirill, middleName=Antonovich, dateBirth=1994-09-11, phoneNumber=8-925-444-89-17, address=Moskow, Komissarov 125, kv.800, rank=Rank(id=2, rankName=EMPLOYEE, salary=50000))
+Employee(id=3, lastName=Eванов, name=Сергей, middleName=Вадимович, dateBirth=1990-05-17, phoneNumber=8-933-555-55-55, address=Владивосток, Красная 54, кв.3421, rank=Rank(id=1, rankName=MANAGER, salary=80000))
+Employee(id=4, lastName=TTT, name=VVV, middleName=FFF, dateBirth=2011-01-01, phoneNumber=888, address=RRR, rank=Rank(id=2, rankName=EMPLOYEE, salary=50000))
+Employee(id=5, lastName=Filatov, name=Evgeniy, middleName=Vasilievich, dateBirth=1994-12-02, phoneNumber=8(936)-512-38-74, address=Ectb, Stroiteley 125, d 14, corp4, kv 98, rank=Rank(id=1, rankName=MANAGER, salary=80000))
+Employee(id=6, lastName=Tolstoy, name=Lev, middleName=Anatolievich, dateBirth=1905-05-19, phoneNumber=8(977)-55538-55, address=SPB, rank=Rank(id=1, rankName=MANAGER, salary=80000))
+Employee(id=7, lastName=Filatov, name=Ivan, middleName=Vasilievich, dateBirth=1975-03-02, phoneNumber=8(936)-512-38-74, address=Ectb, Stroitiley 125, d 14, corp4, kv 98, rank=Rank(id=2, rankName=EMPLOYEE, salary=50000))
+Employee(id=8, lastName=Tunov, name=Vadim, middleName=Sadyikov, dateBirth=1990-03-29, phoneNumber=8-992-456-91-00, address=Vladivostok, veteranov 54,d 6,corp 9, kv 100, rank=Rank(id=2, rankName=EMPLOYEE, salary=50000))
+Employee(id=9, lastName=Tunov, name=Leonid, middleName=Sadyikov, dateBirth=1990-03-29, phoneNumber=8-992-555-10-00, address=Vladivostok, veteranov 54,d 6,corp 9, kv 100, rank=Rank(id=2, rankName=EMPLOYEE, salary=50000))
+Employee(id=11, lastName=Pletnev, name=Dmitriy, middleName=Olegovich, dateBirth=1988-05-05, phoneNumber=8(936)-512-55-99, address=MSO, rank=Rank(id=1, rankName=MANAGER, salary=80000))
+Hibernate: 
+    update
+        employees 
+    set
+        address=? 
+    where
+        id=?
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        employees e1_0 
+    left join
+        ranks r1_0 
+            on r1_0.id=e1_0.rank_id 
+    where
+        e1_0.id=?
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        employees e1_0 
+    left join
+        ranks r1_0 
+            on r1_0.id=e1_0.rank_id 
+    where
+        e1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        employees
+        (address,date_birth,last_name,middle_name,name,phone_number,rank_id) 
+    values
+        (?,?,?,?,?,?,?)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

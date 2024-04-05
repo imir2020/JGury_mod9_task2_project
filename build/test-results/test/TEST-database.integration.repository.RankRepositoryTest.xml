@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="database.integration.repository.RankRepositoryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-04-05T16:23:48" hostname="LOCALHOST" time="0.02">
+  <properties/>
+  <testcase name="delete()" classname="database.integration.repository.RankRepositoryTest" time="0.004"/>
+  <testcase name="findAll()" classname="database.integration.repository.RankRepositoryTest" time="0.003"/>
+  <testcase name="update()" classname="database.integration.repository.RankRepositoryTest" time="0.004"/>
+  <testcase name="findById()" classname="database.integration.repository.RankRepositoryTest" time="0.003"/>
+  <testcase name="save()" classname="database.integration.repository.RankRepositoryTest" time="0.004"/>
+  <system-out><![CDATA[Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0
+Hibernate: 
+    update
+        ranks 
+    set
+        salary=? 
+    where
+        id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    insert 
+    into
+        ranks
+        (rank_name,salary) 
+    values
+        (?,?)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

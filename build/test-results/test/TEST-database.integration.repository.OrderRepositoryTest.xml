@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="database.integration.repository.OrderRepositoryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-04-05T16:23:48" hostname="LOCALHOST" time="0.027">
+  <properties/>
+  <testcase name="delete()" classname="database.integration.repository.OrderRepositoryTest" time="0.006"/>
+  <testcase name="update()" classname="database.integration.repository.OrderRepositoryTest" time="0.005"/>
+  <testcase name="findById()" classname="database.integration.repository.OrderRepositoryTest" time="0.003"/>
+  <testcase name="save()" classname="database.integration.repository.OrderRepositoryTest" time="0.005"/>
+  <testcase name="findAllBy()" classname="database.integration.repository.OrderRepositoryTest" time="0.005"/>
+  <system-out><![CDATA[Hibernate: 
+    select
+        o1_0.id,
+        o1_0.count_product,
+        o1_0.date_order,
+        o1_0.name_product,
+        o1_0.price_product,
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        orders o1_0 
+    left join
+        suppliers s1_0 
+            on s1_0.id=o1_0.supplier_id 
+    where
+        o1_0.id=?
+Hibernate: 
+    update
+        orders 
+    set
+        name_product=? 
+    where
+        id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.count_product,
+        o1_0.date_order,
+        o1_0.name_product,
+        o1_0.price_product,
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        orders o1_0 
+    left join
+        suppliers s1_0 
+            on s1_0.id=o1_0.supplier_id 
+    where
+        o1_0.id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.count_product,
+        o1_0.date_order,
+        o1_0.name_product,
+        o1_0.price_product,
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        orders o1_0 
+    left join
+        suppliers s1_0 
+            on s1_0.id=o1_0.supplier_id 
+    where
+        o1_0.id=?
+Hibernate: 
+    insert 
+    into
+        suppliers
+        (address,e_mail,name,phone_number) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        orders
+        (count_product,date_order,name_product,price_product,supplier_id) 
+    values
+        (?,?,?,?,?)
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.count_product,
+        o1_0.date_order,
+        o1_0.name_product,
+        o1_0.price_product,
+        o1_0.supplier_id 
+    from
+        orders o1_0
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        suppliers s1_0 
+    where
+        s1_0.id=?
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        suppliers s1_0 
+    where
+        s1_0.id=?
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.e_mail,
+        s1_0.name,
+        s1_0.phone_number 
+    from
+        suppliers s1_0 
+    where
+        s1_0.id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

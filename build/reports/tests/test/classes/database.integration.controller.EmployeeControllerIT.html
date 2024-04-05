@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - EmployeeControllerIT</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>EmployeeControllerIT</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/database.integration.controller.html">database.integration.controller</a> &gt; EmployeeControllerIT</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.128s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">create()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">delete()</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findAll()</td>
+<td class="success">0.041s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findById()</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">registration()</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update()</td>
+<td class="success">0.017s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-04-05T19:23:46.861+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+Hibernate: 
+    insert 
+    into
+        employees
+        (address,date_birth,last_name,middle_name,name,phone_number,rank_id) 
+    values
+        (?,?,?,?,?,?,?)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0
+2024-04-05T19:23:46.892+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        employees e1_0 
+    left join
+        ranks r1_0 
+            on r1_0.id=e1_0.rank_id 
+    where
+        e1_0.id=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=?
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        e1_0.rank_id 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+2024-04-05T19:23:46.924+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0
+2024-04-05T19:23:46.956+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to update  in Employee object by your id, in method update()
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        employees e1_0 
+    left join
+        ranks r1_0 
+            on r1_0.id=e1_0.rank_id 
+    where
+        e1_0.id=?
+Hibernate: 
+    update
+        employees 
+    set
+        address=?,
+        date_birth=?,
+        last_name=?,
+        middle_name=?,
+        name=?,
+        phone_number=?,
+        rank_id=? 
+    where
+        id=?
+2024-04-05T19:23:46.974+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        employees e1_0 
+    left join
+        ranks r1_0 
+            on r1_0.id=e1_0.rank_id 
+    where
+        e1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at 5 апр. 2024 г., 19:23:48</p>
+</div>
+</div>
+</body>
+</html>

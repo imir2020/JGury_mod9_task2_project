@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+<form th:action="@{/users/registration}" method="post" enctype="multipart/form-data" th:object="${user}">
+    <label for="name">Name:
+        <input type="text" name="name" id="name" th:value="*{name}">
+    </label><br/>
+
+    <label for="birthday">Birthday:
+        <input type="date" name="birthday" id="birthday" th:value="*{birthday}">
+    </label><br/>
+
+    <label for="password">Password:
+        <input id="password" type="text" name="password" th:value="*{password}">
+    </label><br/>
+    <label for="image">Image:
+        <input id="image" type="file" name="image" th:value="*{image}">
+    </label>
+    <br>
+    <div th:each="status:${statusName}">
+        <input th:id="${status}" type="radio" name="status" th:value="${status}"
+               th:checked="${status==user.status}">
+
+        <label th:for="${status}" th:text="${status}">Status name</label>
+        <br>
+    </div>
+    <br>
+
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

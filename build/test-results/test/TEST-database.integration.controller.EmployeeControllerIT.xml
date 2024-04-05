@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="database.integration.controller.EmployeeControllerIT" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-04-05T16:23:46" hostname="LOCALHOST" time="0.133">
+  <properties/>
+  <testcase name="create()" classname="database.integration.controller.EmployeeControllerIT" time="0.014"/>
+  <testcase name="registration()" classname="database.integration.controller.EmployeeControllerIT" time="0.019"/>
+  <testcase name="delete()" classname="database.integration.controller.EmployeeControllerIT" time="0.021"/>
+  <testcase name="findAll()" classname="database.integration.controller.EmployeeControllerIT" time="0.041"/>
+  <testcase name="update()" classname="database.integration.controller.EmployeeControllerIT" time="0.017"/>
+  <testcase name="findById()" classname="database.integration.controller.EmployeeControllerIT" time="0.016"/>
+  <system-out><![CDATA[2024-04-05T19:23:46.861+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+Hibernate: 
+    insert 
+    into
+        employees
+        (address,date_birth,last_name,middle_name,name,phone_number,rank_id) 
+    values
+        (?,?,?,?,?,?,?)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0
+2024-04-05T19:23:46.892+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        employees e1_0 
+    left join
+        ranks r1_0 
+            on r1_0.id=e1_0.rank_id 
+    where
+        e1_0.id=?
+Hibernate: 
+    delete 
+    from
+        employees 
+    where
+        id=?
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        e1_0.rank_id 
+    from
+        employees e1_0
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0 
+    where
+        r1_0.id=?
+2024-04-05T19:23:46.924+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0
+2024-04-05T19:23:46.956+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to update  in Employee object by your id, in method update()
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        employees e1_0 
+    left join
+        ranks r1_0 
+            on r1_0.id=e1_0.rank_id 
+    where
+        e1_0.id=?
+Hibernate: 
+    update
+        employees 
+    set
+        address=?,
+        date_birth=?,
+        last_name=?,
+        middle_name=?,
+        name=?,
+        phone_number=?,
+        rank_id=? 
+    where
+        id=?
+2024-04-05T19:23:46.974+03:00  INFO 14360 --- [    Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+Hibernate: 
+    select
+        e1_0.id,
+        e1_0.address,
+        e1_0.date_birth,
+        e1_0.last_name,
+        e1_0.middle_name,
+        e1_0.name,
+        e1_0.phone_number,
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        employees e1_0 
+    left join
+        ranks r1_0 
+            on r1_0.id=e1_0.rank_id 
+    where
+        e1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.rank_name,
+        r1_0.salary 
+    from
+        ranks r1_0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

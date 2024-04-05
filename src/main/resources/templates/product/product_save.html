@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Save Product</title>
+</head>
+<body>
+<form th:action="@{/products}" method="post" th:object="${product}">
+    <label for="count">Count:
+        <input id="count" type="number" name="count" th:value="*{count}">
+    </label>
+    <br>
+    <label for="name">Name:
+        <input id="name" type="text" name="name" th:value="*{name}">
+    </label>
+    <br>
+
+    <label for="priceForOne">PriceForOne:
+        <input id="priceForOne" type="number" name="" th:value="*{priceForOne}">
+    </label>
+    <br>
+
+<!--    <label for="categoryId">CategoryId:-->
+<!--        <input id="categoryId" type="number" name="categoryId" th:value="*{category.id}">-->
+<!--    </label>-->
+    <label for="categoryName">CategoryName:
+        <input id="categoryName" type="text" name="categoryName" th:value="*{category.categoryName}">
+    </label>
+    <br>
+<!--    <label for="supplierId">SupplierId:-->
+<!--        <input id="supplierId" type="number" name="supplierId" th:value="*{supplier.id}">-->
+<!--    </label>-->
+<!--    <br>-->
+    <label for="supplierAddress">supplierAddress:
+        <input id="supplierAddress" type="text" name="supplierAddress" th:value="*{supplier.address}">
+    </label>
+    <br>
+    <label for="supplierEmail">supplierEmail:
+        <input id="supplierEmail" type="text" name="supplierEmail" th:value="*{supplier.email}">
+    </label>
+    <br>
+    <label for="supplierName">supplierName:
+        <input id="supplierName" type="text" name="supplierName" th:value="*{supplier.name}">
+    </label>
+    <br>
+    <label for="supplierPhoneNumber">supplierPhoneNumber:
+        <input id="supplierPhoneNumber" type="text" name="supplierPhoneNumber" th:value="*{supplier.phoneNumber}">
+    </label>
+    <br>
+    <br>
+    <button type="submit">Save</button>
+</form>
+<br>
+<form action="/login" method="get">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>

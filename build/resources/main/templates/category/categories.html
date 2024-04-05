@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+<div th:each="category : ${categories}">
+    <form th:action="@{/categories/{id}(id=${category.id})}" method="get" th:object="${category}">
+        <li th:text="'Номер: ' + ${category.id}"></li>
+        <li th:text="'Наименование категории: ' + ${category.categoryName}"></li>
+        <button type="submit">Change</button>
+    </form>
+</div>
+
+<!--<form>-->
+<!--    <div>-->
+<!--        <label for="page">Page:-->
+
+<!--            <input id="page" type="number" name="page" th:value="${categories.metadata.page}">-->
+<!--        </label>-->
+<!--        <br>-->
+<!--        <br>-->
+
+<!--        <label for="size">Size:-->
+<!--            <input id="size" type="number" name="size" th:value="${categories.metadata.size}">-->
+<!--        </label>-->
+<!--    </div>-->
+
+<!--</form>-->
+<!--<div th:each="category:${categories.content}">-->
+<!--    <li th:text="'Номер: ' + ${category.id}"></li>-->
+<!--    <li th:text="'Наименование категории: ' + ${category.categoryName}"></li>-->
+<!--</div>-->
+<br>
+<form action="/login" method="get">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>

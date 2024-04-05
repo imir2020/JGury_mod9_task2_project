@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - UserRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>UserRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/database.integration.repository.html">database.integration.repository</a> &gt; UserRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">9</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.030s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">delete()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findAll()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findAllUsersByBirthday()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findAllUsersSortedByName()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findById()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findByPassword()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findUsersWithChooseStatus()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">save()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">update()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: 
+    select
+        u1_0.id,
+        u1_0.birthday,
+        u1_0.image,
+        u1_0.name,
+        u1_0.password,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.password=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.birthday,
+        u1_0.image,
+        u1_0.name,
+        u1_0.password,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.birthday,
+        u1_0.image,
+        u1_0.name,
+        u1_0.password,
+        u1_0.status 
+    from
+        users u1_0
+User(id=1, name=Imir, birthday=1995-01-11, password=111, status=MANAGER, image=null)
+User(id=2, name=Vadim, birthday=1984-08-12, password=334, status=ADMIN, image=null)
+User(id=3, name=Ivan, birthday=1984-11-09, password=56789, status=ADMIN, image=null)
+User(id=4, name=Evgeniy, birthday=1990-09-09, password=333, status=ADMIN, image=null)
+User(id=5, name=Ivan, birthday=1995-01-01, password=999, status=ADMIN, image=null)
+User(id=29, name=Evgeniy, birthday=2024-03-04, password=1299, status=ADMIN, image=null)
+User(id=35, name=Ivan, birthday=2024-04-09, password=12, status=ADMIN, image=one.jpg)
+User(id=37, name=Ivan, birthday=2024-04-09, password=12121212, status=MANAGER, image=three.jpg)
+User(id=38, name=Ivan777, birthday=2024-04-09, password=777, status=MANAGER, image=three.jpg)
+Hibernate: 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.birthday,
+        u1_0.image,
+        u1_0.name,
+        u1_0.password,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.birthday,
+        u1_0.image,
+        u1_0.name,
+        u1_0.password,
+        u1_0.status 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    insert 
+    into
+        users
+        (birthday,image,name,password,status) 
+    values
+        (?,?,?,?,?)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at 5 апр. 2024 г., 19:23:48</p>
+</div>
+</div>
+</body>
+</html>

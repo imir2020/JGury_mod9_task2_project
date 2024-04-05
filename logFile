@@ -1,0 +1,733 @@
+2024-04-05T12:09:59.396+03:00 ERROR 8452 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.beans.BeanInstantiationException: Failed to instantiate [by.dto.user_dto.FromDtoToUser]: Constructor threw exception] with root cause
+
+java.lang.NullPointerException: image is marked non-null but is null
+	at by.dto.user_dto.FromDtoToUser.<init>(FromDtoToUser.java:12) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.constructAttribute(ModelAttributeMethodProcessor.java:335) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.createAttribute(ModelAttributeMethodProcessor.java:222) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletModelAttributeMethodProcessor.createAttribute(ServletModelAttributeMethodProcessor.java:85) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:149) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.8.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-04-05T12:10:01.564+03:00 ERROR 8452 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.beans.BeanInstantiationException: Failed to instantiate [by.dto.user_dto.FromDtoToUser]: Constructor threw exception] with root cause
+
+java.lang.NullPointerException: image is marked non-null but is null
+	at by.dto.user_dto.FromDtoToUser.<init>(FromDtoToUser.java:12) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.constructAttribute(ModelAttributeMethodProcessor.java:335) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.createAttribute(ModelAttributeMethodProcessor.java:222) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletModelAttributeMethodProcessor.createAttribute(ServletModelAttributeMethodProcessor.java:85) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:149) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.8.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-04-05T15:54:08.592+03:00  INFO 3756 --- [http-nio-8080-exec-6] by.service.UserService                   : The User with name Imir was login
+2024-04-05T15:54:08.612+03:00  INFO 3756 --- [http-nio-8080-exec-5] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T15:58:12.036+03:00  INFO 12772 --- [http-nio-8080-exec-7] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T15:58:12.044+03:00 ERROR 12772 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.time.format.DateTimeParseException: Text '' could not be parsed at index 0] with root cause
+
+java.time.format.DateTimeParseException: Text '' could not be parsed at index 0
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2052) ~[na:na]
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1954) ~[na:na]
+	at java.base/java.time.LocalDate.parse(LocalDate.java:430) ~[na:na]
+	at java.base/java.time.LocalDate.parse(LocalDate.java:415) ~[na:na]
+	at by.mapper.map_interfaces.user.DtoToUserMapperImpl.mapFrom(DtoToUserMapperImpl.java:28) ~[main/:na]
+	at by.mapper.classes.users.DtoToUser.mapFrom(DtoToUser.java:18) ~[main/:na]
+	at by.service.UserService.lambda$save$0(UserService.java:54) ~[main/:na]
+	at java.base/java.util.Optional.map(Optional.java:260) ~[na:na]
+	at by.service.UserService.save(UserService.java:52) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.9.jar:6.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.9.jar:6.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.9.jar:6.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.9.jar:6.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.9.jar:6.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.9.jar:6.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.9.jar:6.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.9.jar:6.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.9.jar:6.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.9.jar:6.0.9]
+	at by.service.UserService$$SpringCGLIB$$0.save(<generated>) ~[main/:na]
+	at by.http.controller.UserRegistrationController.create(UserRegistrationController.java:42) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.8.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-04-05T15:59:37.238+03:00  INFO 12772 --- [http-nio-8080-exec-5] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T15:59:37.289+03:00  WARN 12772 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "UserDto(id=35,name=Ivan,password=12,birthday=2024-04-09,status=ADMIN)"]
+2024-04-05T16:03:41.551+03:00  INFO 5380 --- [http-nio-8080-exec-1] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T16:03:41.605+03:00  WARN 5380 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "UserDto(id=36,name=Ivan,password=12,birthday=2024-04-09,status=ADMIN,image=one.jpg)"]
+2024-04-05T16:30:25.866+03:00  INFO 9676 --- [http-nio-8080-exec-1] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T16:30:25.921+03:00  INFO 9676 --- [http-nio-8080-exec-3] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T16:30:39.015+03:00  WARN 9676 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-04-05T16:55:55.730+03:00  INFO 4464 --- [http-nio-8080-exec-1] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T16:55:55.784+03:00  INFO 4464 --- [http-nio-8080-exec-2] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T16:56:05.770+03:00  WARN 4464 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-04-05T16:59:50.189+03:00  INFO 15112 --- [http-nio-8080-exec-1] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T17:00:45.618+03:00  INFO 14708 --- [http-nio-8080-exec-1] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T17:01:44.130+03:00  INFO 15304 --- [http-nio-8080-exec-1] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:12:44.327+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:12:44.658+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to delete Category object by your id, in method delete()
+2024-04-05T19:12:44.719+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:12:44.842+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to update name by id for object Category in method updateName()
+2024-04-05T19:12:44.865+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:12:44.891+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:12:44.930+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+2024-04-05T19:12:44.972+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:12:45.025+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to update  in Employee object by your id, in method update()
+2024-04-05T19:12:45.047+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:12:45.095+03:00  INFO 10884 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:12:45.111+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:12:45.132+03:00 ERROR 10884 --- [Test worker] org.thymeleaf.TemplateEngine             : [THYMELEAF][Test worker] Exception processing template "product/product_save": Exception evaluating SpringEL expression: "category.categoryName" (template: "product/product_save" - line 27, col 66)
+
+org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "category.categoryName" (template: "product/product_save" - line 27, col 66)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292) ~[thymeleaf-spring6-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.standard.expression.SelectionVariableExpression.executeSelectionVariableExpression(SelectionVariableExpression.java:158) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:92) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1415) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.render(TestDispatcherServlet.java:137) ~[spring-test-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1159) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1098) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.8.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-6.0.9.jar:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar:6.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165) ~[spring-test-6.0.9.jar:6.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.0.9.jar:6.0.9]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.0.9.jar:6.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar:6.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.0.9.jar:6.0.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-6.0.9.jar:6.0.9]
+	at database.integration.controller.ProductControllerIT.registration(ProductControllerIT.java:41) ~[test/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727) ~[junit-platform-commons-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[na:na]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'category' cannot be found on object of type 'by.dto.product_dto.FromProductDtoToBase' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:222) ~[spring-expression-6.0.9.jar:6.0.9]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:105) ~[spring-expression-6.0.9.jar:6.0.9]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:93) ~[spring-expression-6.0.9.jar:6.0.9]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:56) ~[spring-expression-6.0.9.jar:6.0.9]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92) ~[spring-expression-6.0.9.jar:6.0.9]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114) ~[spring-expression-6.0.9.jar:6.0.9]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338) ~[spring-expression-6.0.9.jar:6.0.9]
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265) ~[thymeleaf-spring6-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+	... 127 common frames omitted
+
+2024-04-05T19:12:45.145+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to delete Product object by your id, in method delete()
+2024-04-05T19:12:45.160+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:12:45.193+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to update in method update()
+2024-04-05T19:12:45.205+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:12:45.208+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:12:45.210+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:12:45.278+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:12:45.299+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to delete Supplier object by your id, in method delete()
+2024-04-05T19:12:45.314+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:12:45.336+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:12:45.349+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:12:45.380+03:00  INFO 10884 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your password, in method delete()
+2024-04-05T19:12:45.384+03:00  INFO 10884 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:12:45.393+03:00  INFO 10884 --- [Test worker] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T19:12:46.645+03:00  WARN 10884 --- [Test worker] d.i.repository.EmployeeRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:12:46.711+03:00  WARN 10884 --- [Test worker] ProductsDaoTest                          : Object was deleted in method delete():Optional.empty
+2024-04-05T19:12:46.808+03:00  WARN 10884 --- [Test worker] d.i.repository.SupplierRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:12:46.890+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:12:46.895+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:12:46.902+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:12:46.905+03:00  INFO 10884 --- [Test worker] by.service.CategoryService               : Attempt to delete Category object by your id, in method delete()
+2024-04-05T19:12:46.910+03:00  WARN 10884 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:12:46.910+03:00 ERROR 10884 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "category" нарушает ограничение внешнего ключа "fk1cf90etcu98x1e6n9aks3tel3" таблицы "products"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "products".
+2024-04-05T19:12:46.931+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+2024-04-05T19:12:46.934+03:00  WARN 10884 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:12:46.934+03:00 ERROR 10884 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "employees" нарушает ограничение внешнего ключа "fk2jitm3kpqyikxeo6s0a37v99j" таблицы "sales"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "sales".
+2024-04-05T19:12:46.956+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to extract PhoneNumbers collection in the form of page in method findAllByOrderByName(): {}
+[8(936)-512-38-74, 8(977)-55538-55, 8(936)-512-38-74, 8-992-456-91-00]
+2024-04-05T19:12:46.963+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:12:46.966+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:12:46.975+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto page in method findAllByOrderByName(): {}[EmployeeDto(id=11, lastName=Pletnev, name=Dmitriy, middleName=Olegovich, dateBirth=1988-05-05, phoneNumber=8(936)-512-55-99, address=MSO, rank=Rank(id=1, rankName=MANAGER, salary=80000)), EmployeeDto(id=5, lastName=Filatov, name=Evgeniy, middleName=Vasilievich, dateBirth=1994-12-02, phoneNumber=8(936)-512-38-74, address=Ectb, Stroiteley 125, d 14, corp4, kv 98, rank=Rank(id=1, rankName=MANAGER, salary=80000))]
+2024-04-05T19:12:46.979+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:12:46.991+03:00  INFO 10884 --- [Test worker] by.service.EmployeeService               : Attempt to update address in Employee object by your id, in method updateAddress()
+2024-04-05T19:12:46.998+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to delete Product object by your id, in method delete()
+2024-04-05T19:12:47.001+03:00  WARN 10884 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:12:47.001+03:00 ERROR 10884 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "products" нарушает ограничение внешнего ключа "fkkxc13g7l4ioljxqyoo15nh051" таблицы "sales"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "sales".
+2024-04-05T19:12:47.006+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to update price for one product by id for object Product in method updateProductPriceForOneById()
+2024-04-05T19:12:47.007+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:12:47.011+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:12:47.018+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:12:47.024+03:00  INFO 10884 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:12:47.034+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to delete Supplier object by your id, in method delete()
+2024-04-05T19:12:47.048+03:00  WARN 10884 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:12:47.049+03:00 ERROR 10884 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "suppliers" нарушает ограничение внешнего ключа "fkg2540vs5sg5b0uov81t6p0229" таблицы "orders"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "orders".
+2024-04-05T19:12:47.055+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:12:47.061+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:12:47.068+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:12:47.074+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method updateEmail()
+2024-04-05T19:12:47.074+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:12:47.079+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to find  phone numbers collection, in method listPhoneNumbers()
+2024-04-05T19:12:47.084+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:12:47.088+03:00  INFO 10884 --- [Test worker] by.service.SupplierService               : Attempt to find list of arrays emails and phone numbers in method listEmailAndPhoneNumber()
+2024-04-05T19:12:47.099+03:00  INFO 10884 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your id, in method delete()
+2024-04-05T19:12:47.099+03:00  INFO 10884 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:12:47.103+03:00  INFO 10884 --- [Test worker] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T19:12:47.107+03:00  INFO 10884 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:14:00.839+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:14:01.129+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to delete Category object by your id, in method delete()
+2024-04-05T19:14:01.173+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:14:01.250+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to update name by id for object Category in method updateName()
+2024-04-05T19:14:01.265+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:14:01.289+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:14:01.324+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+2024-04-05T19:14:01.355+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:14:01.391+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to update  in Employee object by your id, in method update()
+2024-04-05T19:14:01.417+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:14:01.442+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:14:01.458+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to delete Product object by your id, in method delete()
+2024-04-05T19:14:01.468+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:14:01.497+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to update in method update()
+2024-04-05T19:14:01.512+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:14:01.514+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:14:01.517+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:14:01.566+03:00  INFO 9188 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your password, in method delete()
+2024-04-05T19:14:01.572+03:00  INFO 9188 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:14:01.585+03:00  INFO 9188 --- [Test worker] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T19:14:03.073+03:00  WARN 9188 --- [Test worker] d.i.repository.EmployeeRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:14:03.127+03:00  WARN 9188 --- [Test worker] ProductsDaoTest                          : Object was deleted in method delete():Optional.empty
+2024-04-05T19:14:03.166+03:00  WARN 9188 --- [Test worker] d.i.repository.SupplierRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:14:03.265+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:14:03.271+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:14:03.279+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:14:03.282+03:00  INFO 9188 --- [Test worker] by.service.CategoryService               : Attempt to delete Category object by your id, in method delete()
+2024-04-05T19:14:03.287+03:00  WARN 9188 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:14:03.287+03:00 ERROR 9188 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "category" нарушает ограничение внешнего ключа "fk1cf90etcu98x1e6n9aks3tel3" таблицы "products"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "products".
+2024-04-05T19:14:03.300+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+2024-04-05T19:14:03.305+03:00  WARN 9188 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:14:03.305+03:00 ERROR 9188 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "employees" нарушает ограничение внешнего ключа "fk2jitm3kpqyikxeo6s0a37v99j" таблицы "sales"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "sales".
+2024-04-05T19:14:03.337+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to extract PhoneNumbers collection in the form of page in method findAllByOrderByName(): {}
+[8(936)-512-38-74, 8(977)-55538-55, 8(936)-512-38-74, 8-992-456-91-00]
+2024-04-05T19:14:03.348+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:14:03.353+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:14:03.363+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto page in method findAllByOrderByName(): {}[EmployeeDto(id=11, lastName=Pletnev, name=Dmitriy, middleName=Olegovich, dateBirth=1988-05-05, phoneNumber=8(936)-512-55-99, address=MSO, rank=Rank(id=1, rankName=MANAGER, salary=80000)), EmployeeDto(id=5, lastName=Filatov, name=Evgeniy, middleName=Vasilievich, dateBirth=1994-12-02, phoneNumber=8(936)-512-38-74, address=Ectb, Stroiteley 125, d 14, corp4, kv 98, rank=Rank(id=1, rankName=MANAGER, salary=80000))]
+2024-04-05T19:14:03.368+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:14:03.379+03:00  INFO 9188 --- [Test worker] by.service.EmployeeService               : Attempt to update address in Employee object by your id, in method updateAddress()
+2024-04-05T19:14:03.387+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to delete Product object by your id, in method delete()
+2024-04-05T19:14:03.391+03:00  WARN 9188 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:14:03.392+03:00 ERROR 9188 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "products" нарушает ограничение внешнего ключа "fkkxc13g7l4ioljxqyoo15nh051" таблицы "sales"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "sales".
+2024-04-05T19:14:03.399+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to update price for one product by id for object Product in method updateProductPriceForOneById()
+2024-04-05T19:14:03.400+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:14:03.404+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:14:03.413+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:14:03.419+03:00  INFO 9188 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:14:03.427+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to delete Supplier object by your id, in method delete()
+2024-04-05T19:14:03.430+03:00  WARN 9188 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:14:03.430+03:00 ERROR 9188 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "suppliers" нарушает ограничение внешнего ключа "fkg2540vs5sg5b0uov81t6p0229" таблицы "orders"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "orders".
+2024-04-05T19:14:03.434+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:14:03.440+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:14:03.448+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:14:03.454+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method updateEmail()
+2024-04-05T19:14:03.454+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:14:03.458+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to find  phone numbers collection, in method listPhoneNumbers()
+2024-04-05T19:14:03.463+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:14:03.467+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to find list of arrays emails and phone numbers in method listEmailAndPhoneNumber()
+2024-04-05T19:14:03.476+03:00  INFO 9188 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your id, in method delete()
+2024-04-05T19:14:03.477+03:00  INFO 9188 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:14:03.481+03:00  INFO 9188 --- [Test worker] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T19:14:03.488+03:00  INFO 9188 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:14:03.510+03:00  INFO 9188 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:14:03.519+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:14:03.533+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to delete Supplier object by your id, in method delete()
+2024-04-05T19:14:03.541+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:14:03.555+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:14:03.562+03:00  INFO 9188 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:16:36.864+03:00  INFO 14808 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:16:37.157+03:00  INFO 14808 --- [Test worker] by.service.CategoryService               : Attempt to delete Category object by your id, in method delete()
+2024-04-05T19:16:37.199+03:00  INFO 14808 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:16:37.279+03:00  INFO 14808 --- [Test worker] by.service.CategoryService               : Attempt to update name by id for object Category in method updateName()
+2024-04-05T19:16:37.293+03:00  INFO 14808 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:16:37.314+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:16:37.344+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+2024-04-05T19:16:37.376+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:16:37.411+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to update  in Employee object by your id, in method update()
+2024-04-05T19:16:37.429+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:16:37.454+03:00  INFO 14808 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:16:37.470+03:00  INFO 14808 --- [Test worker] by.service.ProductService                : ProductService: Attempt to delete Product object by your id, in method delete()
+2024-04-05T19:16:37.479+03:00  INFO 14808 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:16:37.513+03:00  INFO 14808 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:16:37.517+03:00  INFO 14808 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:16:37.519+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:16:37.567+03:00  INFO 14808 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your password, in method delete()
+2024-04-05T19:16:37.572+03:00  INFO 14808 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:16:38.836+03:00  WARN 14808 --- [Test worker] d.i.repository.EmployeeRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:16:38.889+03:00  WARN 14808 --- [Test worker] ProductsDaoTest                          : Object was deleted in method delete():Optional.empty
+2024-04-05T19:16:38.930+03:00  WARN 14808 --- [Test worker] d.i.repository.SupplierRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:16:39.020+03:00  INFO 14808 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:16:39.025+03:00  INFO 14808 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:16:39.033+03:00  INFO 14808 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:16:39.065+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to extract PhoneNumbers collection in the form of page in method findAllByOrderByName(): {}
+[8(936)-512-38-74, 8(977)-55538-55, 8(936)-512-38-74, 8-992-456-91-00]
+2024-04-05T19:16:39.072+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:16:39.076+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:16:39.086+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto page in method findAllByOrderByName(): {}[EmployeeDto(id=11, lastName=Pletnev, name=Dmitriy, middleName=Olegovich, dateBirth=1988-05-05, phoneNumber=8(936)-512-55-99, address=MSO, rank=Rank(id=1, rankName=MANAGER, salary=80000)), EmployeeDto(id=5, lastName=Filatov, name=Evgeniy, middleName=Vasilievich, dateBirth=1994-12-02, phoneNumber=8(936)-512-38-74, address=Ectb, Stroiteley 125, d 14, corp4, kv 98, rank=Rank(id=1, rankName=MANAGER, salary=80000))]
+2024-04-05T19:16:39.090+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:16:39.104+03:00  INFO 14808 --- [Test worker] by.service.EmployeeService               : Attempt to update address in Employee object by your id, in method updateAddress()
+2024-04-05T19:16:39.114+03:00  INFO 14808 --- [Test worker] by.service.ProductService                : ProductService: Attempt to update price for one product by id for object Product in method updateProductPriceForOneById()
+2024-04-05T19:16:39.114+03:00  INFO 14808 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:16:39.119+03:00  INFO 14808 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:16:39.127+03:00  INFO 14808 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:16:39.135+03:00  INFO 14808 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:16:39.145+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:16:39.152+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:16:39.159+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:16:39.164+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method updateEmail()
+2024-04-05T19:16:39.164+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:16:39.168+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to find  phone numbers collection, in method listPhoneNumbers()
+2024-04-05T19:16:39.172+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:16:39.177+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to find list of arrays emails and phone numbers in method listEmailAndPhoneNumber()
+2024-04-05T19:16:39.187+03:00  INFO 14808 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your id, in method delete()
+2024-04-05T19:16:39.187+03:00  INFO 14808 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:16:39.190+03:00  INFO 14808 --- [Test worker] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T19:16:39.196+03:00  INFO 14808 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:16:39.218+03:00  INFO 14808 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:16:39.228+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:16:39.243+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to delete Supplier object by your id, in method delete()
+2024-04-05T19:16:39.250+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:16:39.264+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:16:39.271+03:00  INFO 14808 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:18:43.082+03:00  INFO 15128 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:18:43.537+03:00  INFO 15128 --- [Test worker] by.service.CategoryService               : Attempt to delete Category object by your id, in method delete()
+2024-04-05T19:18:43.588+03:00  WARN 15128 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:18:43.589+03:00 ERROR 15128 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "category" нарушает ограничение внешнего ключа "fk1cf90etcu98x1e6n9aks3tel3" таблицы "products"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "products".
+2024-04-05T19:18:43.605+03:00  INFO 15128 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:18:43.682+03:00  INFO 15128 --- [Test worker] by.service.CategoryService               : Attempt to update name by id for object Category in method updateName()
+2024-04-05T19:18:43.692+03:00  INFO 15128 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:18:43.717+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:18:43.757+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+2024-04-05T19:18:43.785+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:18:43.823+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to update  in Employee object by your id, in method update()
+2024-04-05T19:18:43.841+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:18:45.162+03:00  WARN 15128 --- [Test worker] d.i.repository.EmployeeRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:18:45.216+03:00  WARN 15128 --- [Test worker] ProductsDaoTest                          : Object was deleted in method delete():Optional.empty
+2024-04-05T19:18:45.261+03:00  WARN 15128 --- [Test worker] d.i.repository.SupplierRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:18:45.366+03:00  INFO 15128 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your id, in method delete()
+2024-04-05T19:18:45.366+03:00  INFO 15128 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:18:45.371+03:00  INFO 15128 --- [Test worker] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T19:18:45.380+03:00  INFO 15128 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:18:45.407+03:00  INFO 15128 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:18:45.420+03:00  INFO 15128 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:18:45.433+03:00  INFO 15128 --- [Test worker] by.service.ProductService                : ProductService: Attempt to delete Product object by your id, in method delete()
+2024-04-05T19:18:45.443+03:00  INFO 15128 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:18:45.471+03:00  INFO 15128 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:18:45.473+03:00  INFO 15128 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:18:45.475+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:18:45.498+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:18:45.513+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to delete Supplier object by your id, in method delete()
+2024-04-05T19:18:45.521+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:18:45.536+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:18:45.544+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:18:45.571+03:00  INFO 15128 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your password, in method delete()
+2024-04-05T19:18:45.575+03:00  INFO 15128 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:18:45.721+03:00  INFO 15128 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:18:45.725+03:00  INFO 15128 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:18:45.734+03:00  INFO 15128 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:18:45.759+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to extract PhoneNumbers collection in the form of page in method findAllByOrderByName(): {}
+[8(936)-512-38-74, 8(977)-55538-55, 8(936)-512-38-74, 8-992-456-91-00]
+2024-04-05T19:18:45.768+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:18:45.771+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:18:45.786+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto page in method findAllByOrderByName(): {}[EmployeeDto(id=11, lastName=Pletnev, name=Dmitriy, middleName=Olegovich, dateBirth=1988-05-05, phoneNumber=8(936)-512-55-99, address=MSO, rank=Rank(id=1, rankName=MANAGER, salary=80000)), EmployeeDto(id=5, lastName=Filatov, name=Evgeniy, middleName=Vasilievich, dateBirth=1994-12-02, phoneNumber=8(936)-512-38-74, address=Ectb, Stroiteley 125, d 14, corp4, kv 98, rank=Rank(id=1, rankName=MANAGER, salary=80000))]
+2024-04-05T19:18:45.789+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:18:45.801+03:00  INFO 15128 --- [Test worker] by.service.EmployeeService               : Attempt to update address in Employee object by your id, in method updateAddress()
+2024-04-05T19:18:45.810+03:00  INFO 15128 --- [Test worker] by.service.ProductService                : ProductService: Attempt to update price for one product by id for object Product in method updateProductPriceForOneById()
+2024-04-05T19:18:45.811+03:00  INFO 15128 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:18:45.815+03:00  INFO 15128 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:18:45.822+03:00  INFO 15128 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:18:45.828+03:00  INFO 15128 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:18:45.837+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:18:45.843+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:18:45.849+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:18:45.855+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method updateEmail()
+2024-04-05T19:18:45.855+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:18:45.859+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to find  phone numbers collection, in method listPhoneNumbers()
+2024-04-05T19:18:45.864+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:18:45.868+03:00  INFO 15128 --- [Test worker] by.service.SupplierService               : Attempt to find list of arrays emails and phone numbers in method listEmailAndPhoneNumber()
+2024-04-05T19:23:03.665+03:00  INFO 14704 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:23:03.937+03:00  INFO 14704 --- [Test worker] by.service.CategoryService               : Attempt to delete Category object by your id, in method delete()
+2024-04-05T19:23:03.988+03:00  WARN 14704 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23503
+2024-04-05T19:23:03.989+03:00 ERROR 14704 --- [Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : ОШИБКА: UPDATE или DELETE в таблице "category" нарушает ограничение внешнего ключа "fk1cf90etcu98x1e6n9aks3tel3" таблицы "products"
+  Подробности: На ключ (id)=(1) всё ещё есть ссылки в таблице "products".
+2024-04-05T19:23:04.005+03:00  INFO 14704 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:23:04.078+03:00  INFO 14704 --- [Test worker] by.service.CategoryService               : Attempt to update name by id for object Category in method updateName()
+2024-04-05T19:23:04.087+03:00  INFO 14704 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:23:04.110+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:23:04.145+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+2024-04-05T19:23:04.171+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:23:04.207+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to update  in Employee object by your id, in method update()
+2024-04-05T19:23:04.223+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:23:05.373+03:00  WARN 14704 --- [Test worker] d.i.repository.EmployeeRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:23:05.422+03:00  WARN 14704 --- [Test worker] ProductsDaoTest                          : Object was deleted in method delete():Optional.empty
+2024-04-05T19:23:05.508+03:00  WARN 14704 --- [Test worker] d.i.repository.SupplierRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:23:05.607+03:00  INFO 14704 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your id, in method delete()
+2024-04-05T19:23:05.607+03:00  INFO 14704 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:23:05.617+03:00  INFO 14704 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:23:05.645+03:00  INFO 14704 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:23:05.659+03:00  INFO 14704 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:23:05.671+03:00  INFO 14704 --- [Test worker] by.service.ProductService                : ProductService: Attempt to delete Product object by your id, in method delete()
+2024-04-05T19:23:05.680+03:00  INFO 14704 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:23:05.706+03:00  INFO 14704 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:23:05.709+03:00  INFO 14704 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:23:05.710+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:23:05.732+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:23:05.749+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to delete Supplier object by your id, in method delete()
+2024-04-05T19:23:05.757+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:23:05.771+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:23:05.780+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:23:05.810+03:00  INFO 14704 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your password, in method delete()
+2024-04-05T19:23:05.814+03:00  INFO 14704 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:23:05.948+03:00  INFO 14704 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:23:05.952+03:00  INFO 14704 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:23:05.959+03:00  INFO 14704 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:23:05.984+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to extract PhoneNumbers collection in the form of page in method findAllByOrderByName(): {}
+[8(936)-512-38-74, 8(977)-55538-55, 8(936)-512-38-74, 8-992-456-91-00]
+2024-04-05T19:23:05.991+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:23:05.994+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:23:06.004+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto page in method findAllByOrderByName(): {}[EmployeeDto(id=11, lastName=Pletnev, name=Dmitriy, middleName=Olegovich, dateBirth=1988-05-05, phoneNumber=8(936)-512-55-99, address=MSO, rank=Rank(id=1, rankName=MANAGER, salary=80000)), EmployeeDto(id=5, lastName=Filatov, name=Evgeniy, middleName=Vasilievich, dateBirth=1994-12-02, phoneNumber=8(936)-512-38-74, address=Ectb, Stroiteley 125, d 14, corp4, kv 98, rank=Rank(id=1, rankName=MANAGER, salary=80000))]
+2024-04-05T19:23:06.008+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:23:06.019+03:00  INFO 14704 --- [Test worker] by.service.EmployeeService               : Attempt to update address in Employee object by your id, in method updateAddress()
+2024-04-05T19:23:06.029+03:00  INFO 14704 --- [Test worker] by.service.ProductService                : ProductService: Attempt to update price for one product by id for object Product in method updateProductPriceForOneById()
+2024-04-05T19:23:06.029+03:00  INFO 14704 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:23:06.034+03:00  INFO 14704 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:23:06.041+03:00  INFO 14704 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:23:06.047+03:00  INFO 14704 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:23:06.056+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:23:06.061+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:23:06.066+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:23:06.071+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method updateEmail()
+2024-04-05T19:23:06.071+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:23:06.074+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to find  phone numbers collection, in method listPhoneNumbers()
+2024-04-05T19:23:06.085+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:23:06.089+03:00  INFO 14704 --- [Test worker] by.service.SupplierService               : Attempt to find list of arrays emails and phone numbers in method listEmailAndPhoneNumber()
+2024-04-05T19:23:46.449+03:00  INFO 14360 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:23:46.721+03:00  INFO 14360 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:23:46.815+03:00  INFO 14360 --- [Test worker] by.service.CategoryService               : Attempt to update name by id for object Category in method updateName()
+2024-04-05T19:23:46.838+03:00  INFO 14360 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:23:46.861+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:23:46.892+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to delete Employee object in method delete()
+2024-04-05T19:23:46.924+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:23:46.956+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to update  in Employee object by your id, in method update()
+2024-04-05T19:23:46.974+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:23:47.022+03:00  INFO 14360 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:23:47.038+03:00  INFO 14360 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:23:47.051+03:00  INFO 14360 --- [Test worker] by.service.ProductService                : ProductService: Attempt to delete Product object by your id, in method delete()
+2024-04-05T19:23:47.061+03:00  INFO 14360 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:23:47.091+03:00  INFO 14360 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:23:47.094+03:00  INFO 14360 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:23:47.096+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:23:47.120+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:23:47.137+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to delete Supplier object by your id, in method delete()
+2024-04-05T19:23:47.147+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:23:47.163+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:23:47.172+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:23:47.199+03:00  INFO 14360 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your password, in method delete()
+2024-04-05T19:23:47.204+03:00  INFO 14360 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:23:48.394+03:00  WARN 14360 --- [Test worker] d.i.repository.EmployeeRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:23:48.459+03:00  WARN 14360 --- [Test worker] ProductsDaoTest                          : Object was deleted in method delete():Optional.empty
+2024-04-05T19:23:48.601+03:00  WARN 14360 --- [Test worker] d.i.repository.SupplierRepositoryTest    : Object was deleted in method delete()
+2024-04-05T19:23:48.668+03:00  INFO 14360 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto collection in method findAll()
+2024-04-05T19:23:48.673+03:00  INFO 14360 --- [Test worker] by.service.CategoryService               : Attempt to extract categoryDto object in method findById()
+2024-04-05T19:23:48.679+03:00  INFO 14360 --- [Test worker] by.service.CategoryService               : Attempt to save fromCategoryDtoToCategory object in method save()
+2024-04-05T19:23:48.706+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to extract PhoneNumbers collection in the form of page in method findAllByOrderByName(): {}
+[8(936)-512-38-74, 8(977)-55538-55, 8(936)-512-38-74, 8-992-456-91-00]
+2024-04-05T19:23:48.712+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto collection in method findAll()
+2024-04-05T19:23:48.715+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto object in method findById()
+2024-04-05T19:23:48.723+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to extract EmployeeDto page in method findAllByOrderByName(): {}[EmployeeDto(id=11, lastName=Pletnev, name=Dmitriy, middleName=Olegovich, dateBirth=1988-05-05, phoneNumber=8(936)-512-55-99, address=MSO, rank=Rank(id=1, rankName=MANAGER, salary=80000)), EmployeeDto(id=5, lastName=Filatov, name=Evgeniy, middleName=Vasilievich, dateBirth=1994-12-02, phoneNumber=8(936)-512-38-74, address=Ectb, Stroiteley 125, d 14, corp4, kv 98, rank=Rank(id=1, rankName=MANAGER, salary=80000))]
+2024-04-05T19:23:48.727+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to save toBaseEmployeeDto object in method save()
+2024-04-05T19:23:48.738+03:00  INFO 14360 --- [Test worker] by.service.EmployeeService               : Attempt to update address in Employee object by your id, in method updateAddress()
+2024-04-05T19:23:48.746+03:00  INFO 14360 --- [Test worker] by.service.ProductService                : ProductService: Attempt to update price for one product by id for object Product in method updateProductPriceForOneById()
+2024-04-05T19:23:48.746+03:00  INFO 14360 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:23:48.750+03:00  INFO 14360 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto collection in method findAll()
+2024-04-05T19:23:48.756+03:00  INFO 14360 --- [Test worker] by.service.ProductService                : ProductService: Attempt to extract productDto object in method findById()
+2024-04-05T19:23:48.761+03:00  INFO 14360 --- [Test worker] by.service.ProductService                : ProductService: Attempt to save fromProductDtoToBase object in method save()
+2024-04-05T19:23:48.770+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto collection in method findAll()
+2024-04-05T19:23:48.774+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method update()
+2024-04-05T19:23:48.779+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:23:48.784+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to update email by id for object Supplier in method updateEmail()
+2024-04-05T19:23:48.784+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to extract SupplierDto object in method findById()
+2024-04-05T19:23:48.787+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to find  phone numbers collection, in method listPhoneNumbers()
+2024-04-05T19:23:48.791+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to save fromSupplierDtoToBase object in method save()
+2024-04-05T19:23:48.794+03:00  INFO 14360 --- [Test worker] by.service.SupplierService               : Attempt to find list of arrays emails and phone numbers in method listEmailAndPhoneNumber()
+2024-04-05T19:23:48.801+03:00  INFO 14360 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your id, in method delete()
+2024-04-05T19:23:48.802+03:00  INFO 14360 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:23:48.808+03:00  INFO 14360 --- [Test worker] by.service.UserService                   : The User with name Imir was login
