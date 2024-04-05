@@ -43,6 +43,6 @@ spring:
     open-in-view: false
 app:
   image:
-    bucket:E:\ProgectsWithJava\Tasks\Spring\JGury_mod9\JGury_mod9_task2_project\images
+    bucket: E:\ProgectsWithJava\Tasks\Spring\JGury_mod9\JGury_mod9_task2_project\images
 
 

@@ -731,3 +731,8 @@ Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E:
 2024-04-05T19:23:48.801+03:00  INFO 14360 --- [Test worker] by.service.UserService                   : Attempt to delete User object by your id, in method delete()
 2024-04-05T19:23:48.802+03:00  INFO 14360 --- [Test worker] by.service.UserService                   : Attempt to extract UserDto object in method findById()
 2024-04-05T19:23:48.808+03:00  INFO 14360 --- [Test worker] by.service.UserService                   : The User with name Imir was login
+2024-04-05T19:37:13.390+03:00  INFO 15028 --- [http-nio-8080-exec-1] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:37:41.129+03:00  INFO 15028 --- [http-nio-8080-exec-2] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T19:37:41.161+03:00  INFO 15028 --- [http-nio-8080-exec-4] by.service.UserService                   : Attempt to extract UserDto object in method findById()
+2024-04-05T19:45:17.549+03:00  INFO 14060 --- [http-nio-8080-exec-1] by.service.UserService                   : Attempt to save fromUserDtoToBase object in method save()
+2024-04-05T19:45:17.607+03:00  INFO 14060 --- [http-nio-8080-exec-2] by.service.UserService                   : Attempt to extract UserDto object in method findById()

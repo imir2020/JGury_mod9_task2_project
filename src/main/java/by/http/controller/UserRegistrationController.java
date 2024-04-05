@@ -50,9 +50,6 @@ public class UserRegistrationController {
                 .map(it -> "redirect:/users/{id}")
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
-//    @PostMapping("/{userId}/userImages/addImage")
-//    public String addImage(@PathVariable("userId") Long userId,
-//                           @Validated @ModelAttribute )
 
     @PostMapping("/{id}/delete")
     public String delete(FromDtoToUser fromDtoToUser) {

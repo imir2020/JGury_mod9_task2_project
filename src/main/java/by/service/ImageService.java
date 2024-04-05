@@ -14,7 +14,7 @@ import java.util.Optional;
 @Service
 public class ImageService {
 
-    @Value("${app.image.bucket")
+    @Value("${app.image.bucket}")
     private String bucket;
 
     @SneakyThrows
